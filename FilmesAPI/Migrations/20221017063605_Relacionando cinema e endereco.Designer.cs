@@ -24,14 +24,14 @@ namespace FilmesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("EnderecoFK")
-                        .HasColumnType("int");
+                    //b.Property<int>("EnderecoFK")
+                       // .HasColumnType("int");
 
                     b.Property<int>("EnderecoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("GerenteFK")
-                        .HasColumnType("int");
+                    //b.Property<int>("GerenteFK")
+                       // .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .IsRequired()

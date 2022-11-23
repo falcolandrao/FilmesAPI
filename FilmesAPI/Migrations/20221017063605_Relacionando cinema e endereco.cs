@@ -29,8 +29,8 @@ namespace FilmesAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "text", nullable: false),
-                    EnderecoFK = table.Column<int>(type: "int", nullable: false),
-                    GerenteFK = table.Column<int>(type: "int", nullable: false),
+                    //EnderecoFK = table.Column<int>(type: "int", nullable: false),
+                    //GerenteFK = table.Column<int>(type: "int", nullable: false),
                     EnderecoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

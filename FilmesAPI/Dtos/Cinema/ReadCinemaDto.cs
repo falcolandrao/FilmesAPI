@@ -16,5 +16,6 @@ namespace FilmesAPI.Data.Dtos
         [Required(ErrorMessage = "O campo de nome é obrigatório")]
         public string Nome { get; set; }
         public virtual Endereco Endereco { get; set; }
+        public virtual Gerente Gerente { get; set; }
     }
 }

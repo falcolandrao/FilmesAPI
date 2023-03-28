@@ -36,14 +36,27 @@ namespace FilmesAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult RecuperaGerentesPorId(int id)
         {
-            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
-            if (filme != null)
+            Gerente gerente = _context.Gerentes.FirstOrDefault(filme => filme.Id == id);
+            if (gerente != null)
             {
-                ReadFilmeDto filmeDto = _mapper.Map<ReadFilmeDto>(filme);
+                ReadGerenteDto gerenteDto = _mapper.Map<ReadGerenteDto>(gerente);
 
-                return Ok(filmeDto);
+                return Ok(gerenteDto);
             }
             return NotFound();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletaGerente(int id)
+        {
+            Gerente gerente = _context.Gerentes.FirstOrDefault(gerente => gerente.Id == id);
+            if (gerente == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(gerente);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
